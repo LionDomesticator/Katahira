@@ -1,0 +1,48 @@
+//////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////
+//
+//  Katahira.h
+//  Katahira
+//
+//  Created by 横山 マイケル on 09/03/26.
+//  Copyright 2009 Mountainside. All rights reserved.
+//
+//////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////
+
+#import <UIKit/UIKit.h>
+#import <AudioToolbox/AudioServices.h>
+#import <AudioToolbox/AudioToolbox.h>
+
+#define HIRAGANALETTER 0
+#define KATAKANALETTER 1
+#define MAXNUMBEROFLETTERS 104
+
+bool gHiraganaIsSelected;
+bool gSoundsAreOn;
+unsigned gRightAnswer;
+
+NSBundle *mainBundle;
+NSString *lPath;
+NSString *uPath;
+NSString *grPath;
+NSString *settingsDataPath;
+NSString *hiraganafileRawContents;
+NSString *katakanafileRawContents;
+NSString *katahiraReadingsfileRawContents;
+NSString *settingsDataFileRawContents;
+UIImage *gRightImage;
+
+unsigned numDisplayed;
+unsigned hiraganaArrayMaxIndex;
+unsigned katakanaArrayMaxIndex;
+unsigned katahiraReadingsArrayMaxIndex;
+
+NSUInteger hIndexOfArray;
+NSArray *hiraganaKatakanaArray[2];  // Array contains Hiragana or Katakana, switched by YES or NO
+NSArray *katahiraReadingsArray;
+NSMutableArray *settingsDataArray;

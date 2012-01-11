@@ -1,0 +1,42 @@
+//////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////
+//
+//  IdentifyViewController.h
+//  This is used for the 2nd Tab.
+//  Katahira7
+//
+//  Created by 横山 マイケル on 09/02/11.
+//  Copyright 2009 Mountainside. All rights reserved.
+//
+//////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////
+
+#import "Katahira.h"
+
+@interface IdentifyViewController : UIViewController {
+    UITabBarController *tabBarController;
+	SystemSoundID shortSound; 
+	unsigned vcIdentifyRightAnswer;
+	bool testedAnswersList[MAXNUMBEROFLETTERS];
+	
+	IBOutlet UIImageView *imageView;
+	IBOutlet UIButton *vcAnimateButton7;
+	IBOutlet UIButton *vcIdentifyButton1;
+	IBOutlet UIButton *vcIdentifyButton2;
+	IBOutlet UIButton *vcIdentifyButton3;
+	IBOutlet UIButton *vcIdentifyButton4;
+}
+-(IBAction)vcIdentifyButton1Pressed:(id)sender;
+-(IBAction)vcIdentifyButton2Pressed:(id)sender;
+-(IBAction)vcIdentifyButton3Pressed:(id)sender;
+-(IBAction)vcIdentifyButton4Pressed:(id)sender;
+-(IBAction)vcCenterButtonPressed:(id)sender;
+-(void)initProcedure;
+-(void)updateButtons;
+-(IBAction)animateButtons:(id)sender;
+-(IBAction)ivPlayGuitarSound:(bool)correctness;
+@end
